@@ -34,12 +34,20 @@
 
   <main>
     <aside>
-      <form>
-        <label>Sign up for our mailing list:
-          <input type="email" name="email">
+      <form name="custEmail" onsubmit="capture()">
+        <label>
+          Enter your email to join our list!
+          <input type="text" name ="email">
         </label>
-
-        <input type="submit" value="Submit">
+        <label>
+          First Name:
+          <input type="text" name ="firstName">        
+        </label>
+        <label>
+          Last name:
+          <input type="text" name ="lastName">
+        </label>
+        <input type="submit">
       </form>
     </aside>
 
@@ -104,7 +112,8 @@
         </div>
 
       </div>
-    </section>
+      </section>
+
   </main>
   <script src="js/script.js"></script>
 </body>
