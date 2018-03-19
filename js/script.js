@@ -60,3 +60,49 @@ function capture(){
  var theLastName = document.custEmail.lastName.value
  alert("Thank you for signing up for our list, "+ theFirstName +" "+ theLastName + "! \nYour email is: " +theEmail)
 }
+
+
+/* Global Variable to store cart items */
+var cart = []
+
+/* Array to store names of all scarves */ 
+var scarves = ['Reversible Plaid', 'Fringed Plaid', 'Multi Color', 'Northern Lights', 'Ombre Infinity', 'Ashby Twill', 'Wool Cable Knit', 'Etro Paisley-Print Silk']
+
+/* Global Variable to store total price in cart */
+var totalPrice = []
+
+/* Array to store prices of all scarves */
+var prices = [26.99, 18.99, 22.99, 29.99, 11.99, 70.99, 49.99, 26.99]
+
+
+
+
+/********************************************/
+/* Adds and removes scarves to cart */
+function updateCart(itemNum){
+  event.preventDefault()
+
+  console.log('Scarf: ' + scarves[itemNum] + ' - $' + prices[itemNum]);
+  
+  // check for scarf in cart
+  var i = cart.indexOf(scarves[itemNum])
+  if (i == -1){
+    // add to cart if not already present
+    cart.push(scarves[itemNum])
+    console.log(scarves[itemNum] +" added!") 
+    totalPrice.push(prices[itemNum])
+  } else {
+    // if scarf is present, remove it - too warm this time of year to wear double scarves
+    var index = cart.indexOf(scarves[itemNum]);
+    cart.splice(index, 1);
+    console.log(scarves[itemNum] +" removed!")
+    totalPrice.splice(index, 1)
+  }
+  
+  /* Calc and update cart price*/
+  var priceInCart=0;
+  for(var i in totalPrice) { priceInCart += totalPrice[i]; }
+  
+  /* Display current cart info */
+  console.log('Cart size: ' + cart.length + ', Total Price: $' + priceInCart);
+}

@@ -9,6 +9,7 @@ p {
   color: #2d2d2d;
 }
 
+
 /* TODO: size images manually so this is not necessary */
 img {
   max-height: 20rem;
@@ -16,15 +17,48 @@ img {
 
 /***************** NAV *****************/
 
-nav a:hover {
-  text-decoration: underline;
+
+nav a {
+  text-decoration: none;
+  color:white;
 }
+/* Style nav bar */
+ul {
+  background-color: #3D7FCF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+li {
+  font-size: 2rem;
+  height: 1.5rem;
+  border-bottom: 1px solid white;
+  flex-grow: 3;
+  padding: 1rem 0;
+  font-weight: 600;
+  color: white;
+}
+
+/* move nav below 450px */
+@media (max-width: 450px) {
+  ul {
+    flex-direction: column;
+  } 
+  li {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+}
+
 
 /**************** HERO *****************/
 
+/*
 header img {
   max-height: 6rem;
 }
+*/
 
 h1 .logo-w {
   font-size: 3.5rem;
@@ -42,6 +76,44 @@ input[type="submit"] {
 }
 
 /*********** PRODUCTS SECTION ***********/
+
+/* make the buttons nicer */
+.button {
+  width: 3em;
+  border-radius: 1em;
+  
+}
+
+/* Flexbox for products */
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-container:before, .item-container:after { 
+  content:""; display: table; 
+}
+
+.item-container:after { 
+  clear:both;
+}
+
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 .5% 1%;
+  border: 1px solid black;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 1em;
+}
+
+.span_4_of_12 {
+    max-width: 15rem;
+}
+
 
 section {
   padding: 0 .75rem;
