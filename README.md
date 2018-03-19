@@ -83,4 +83,5 @@ pages:
 
 webpagetest.org:
 All a+ expect cache static content
-
+responsivedesignchecker:
+works as expected on all apple devices availble for testing!
