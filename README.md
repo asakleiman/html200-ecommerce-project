@@ -69,4 +69,18 @@ Lesson 09:
 Each weekly assignment will be graded independently. There will not be a final grade for the entire project.
 
 ## Testing
-[update this section with information about the testing steps you took to ensure site quality]
+Resarch user base: Middle to upper middle class, males 18-35, females 18-40
+
+Devices: Android and Apple phones, some tablets, laptops
+
+Live devices:
+Chrome on Windows: works as expected
+Edge on Windows: images do not size properly, flexbox does not work properly
+Silk on Amazon Kindle: works as expected, screen is not small enough to trigger moble mode (1 stack), therefore much is too small
+Chrome on Android:Same as above
+
+pages:
+
+webpagetest.org:
+All a+ expect cache static content
+
